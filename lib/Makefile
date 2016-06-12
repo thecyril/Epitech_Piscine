@@ -5,7 +5,7 @@
 ## Login   <puccio_c@epitech.net>
 ## 
 ## Started on  Fri Oct  9 18:40:22 2015 cyril puccio
-## Last update Fri Nov 13 10:41:19 2015 cyril puccio
+## Last update Tue Dec 15 03:33:57 2015 cyril puccio
 ##
 
 SRC	= my_putchar.c		\
@@ -49,24 +49,26 @@ SRC	= my_putchar.c		\
 FLAGS   += -Wextra -Wall -Werror
 CFLAGS  += -I.
 
-NAME	= libmy.a
+NAME	=	libmy.a
 
-CC	= cc
+CC	= 	cc
 
-OBJ	= $(SRC:.c=.o)
+OBJ	=	 $(SRC:.c=.o)
 
-HEADER	= my.h
+HEADER	=	 my.h
 
-all:	$(OBJ)
-	ar rc $(NAME) *.o
-	ranlib $(NAME)
-	cp $(NAME) ../
-clean:
-	rm $(OBJ)
+all	:	$(NAME)
 
-fclean:		clean
-	rm -r $(NAME)
+$(NAME) :	$(OBJ)
+		ar rc $(NAME) $(OBJ)
+		ranlib $(NAME)
 
-re:	fclean	all
+clean	:
+		rm -f $(OBJ)
 
-.PHONY: all clean fclean re
+fclean	:	clean
+		rm -r $(NAME)
+
+re	:	fclean	all
+
+.PHONY	: all clean fclean re

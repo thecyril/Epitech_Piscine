@@ -1,24 +1,32 @@
 /*
-** my_strcat.c for my_strcat in /home/puccio_c/rendu/Piscine_C_J07/ex_02
+** my_strcat.c for my_strcat in /home/puccio_c/rendu/minishell/PSU_2015_minishell2/lib/my/src
 ** 
 ** Made by cyril puccio
 ** Login   <puccio_c@epitech.net>
 ** 
-** Started on  Wed Oct  7 23:29:15 2015 cyril puccio
-** Last update Mon Oct 12 09:21:03 2015 cyril puccio
+** Started on  Sun Apr  3 19:13:08 2016 cyril puccio
+** Last update Sun Jun 12 11:36:04 2016 cyril puccio
 */
 
 char	*my_strcat(char *dest, char *src)
 {
+  char	*result;
+  int	len;
   int	i;
-  int	l;
 
   i = 0;
-  l = my_strlen(dest);
-  while (src[i] != '\0')
+  len = 0;
+  result = xmalloc(my_strlen(dest) + my_strlen(src) + 1);
+  while (dest[i])
     {
-      dest[l + i] = src[i];
+      result[i] = dest[i];
       i++;
     }
-  return (dest);
+  while (src[len])
+    {
+      result[len + i] = src[len];
+      len++;
+    }
+  result[len + i] = '\0';
+  return (result);
 }

@@ -5,7 +5,7 @@
 ** Login   <puccio_c@epitech.net>
 ** 
 ** Started on  Wed Oct  7 11:11:33 2015 cyril puccio
-** Last update Fri Oct 16 17:12:11 2015 cyril puccio
+** Last update Sun Nov 29 18:50:19 2015 cyril puccio
 */
 
 char    *my_strlowcase(char *str)

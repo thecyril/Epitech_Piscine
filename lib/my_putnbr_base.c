@@ -5,7 +5,7 @@
 ** Login   <puccio_c@epitech.net>
 ** 
 ** Started on  Sat Oct 17 14:57:13 2015 cyril puccio
-** Last update Sat Oct 17 14:58:55 2015 cyril puccio
+** Last update Sun Nov 15 16:21:07 2015 cyril puccio
 */
 
 void    my_putnbr_base(int nb, char *base)

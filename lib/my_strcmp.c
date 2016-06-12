@@ -5,15 +5,15 @@
 ** Login   <puccio_c@epitech.net>
 ** 
 ** Started on  Wed Oct  7 14:21:33 2015 cyril puccio
-** Last update Fri Nov 13 10:31:45 2015 cyril puccio
+** Last update Tue Apr 12 17:02:39 2016 cyril puccio
 */
 
-int	my_strcmp(char *s1, char *s2)
+int     my_strcmp(char *s1, char *s2)
 {
   int	i;
 
   i = 0;
-  while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+  while ((s1[i] == s2[i]) && (s1[i] != '\0') && (s2[i] != '\0'))
     i++;
   return (s1[i] - s2[i]);
 }

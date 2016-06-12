@@ -5,7 +5,7 @@
 ** Login   <puccio_c@epitech.net>
 ** 
 ** Started on  Thu Oct  1 19:31:59 2015 cyril puccio
-** Last update Fri Nov 13 10:30:30 2015 cyril puccio
+** Last update Tue Dec 15 11:11:14 2015 cyril puccio
 */
 
 int	my_strlen(char *str)

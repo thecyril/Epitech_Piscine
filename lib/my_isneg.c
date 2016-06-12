@@ -1,22 +1,28 @@
 /*
-** my_isneg.c for my_isneg.c in /home/puccio_c/rendu/Piscine_C_J03
+** my_isneg.c for my_isneg in /home/puccio_c/rendu/Infographie/gfx_wolf3d/lib/my
 ** 
 ** Made by cyril puccio
 ** Login   <puccio_c@epitech.net>
 ** 
-** Started on  Wed Sep 30 11:42:00 2015 cyril puccio
-** Last update Thu Oct  1 18:16:43 2015 cyril puccio
+** Started on  Sun Jan  3 14:15:21 2016 cyril puccio
+** Last update Sun Jan  3 14:15:33 2016 cyril puccio
 */
 
-int	my_isneg(int n)
+int     my_isneg(char *str)
 {
-  if (n < 0)
+  int   i;
+  int   counter;
+
+  i = 0;
+  counter = 0;
+  while (str[i] < '0' || str[i] > '9')
     {
-      my_putchar('N');
+      if (str[i] == '-')
+        counter++;
+      i++;
     }
+  if (counter % 2 == 0)
+    return (0);
   else
-    {
-      my_putchar('P');
-    }
-  return (0);
+    return (1);
 }

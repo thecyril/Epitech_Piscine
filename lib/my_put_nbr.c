@@ -5,23 +5,31 @@
 ** Login   <puccio_c@epitech.net>
 ** 
 ** Started on  Fri Oct  2 11:34:25 2015 cyril puccio
-** Last update Thu Nov 12 13:08:36 2015 cyril puccio
+** Last update Tue Nov 24 18:41:30 2015 cyril puccio
 */
 
-void	my_put_nbr(int nb)
+void    my_put_nbr(int nb)
 {
-  if (nb < 0 && nb != 2147483647)
+  int   neg;
+
+  neg = 0;
+  if (nb < 0)
     {
-      nb = nb * (-1);
       my_putchar('-');
+      if (nb == -2147483648)
+        {
+          neg = 1;
+          nb++;
+        }
+      nb = nb * -1;
     }
-  if (nb < 0 && nb * (-1) -1 >= 2147483647)
-    my_putstr("2147483648");
-  if (nb > 10)
+  if (nb >= 10)
+    my_put_nbr(nb / 10);
+  if (neg == 1)
     {
-      my_put_nbr(nb / 10);
-      my_putchar(nb % 10 + 48);
+      neg = 0;
+      my_putchar(nb % 10 + '1');
     }
   else
-    my_putchar(nb + 48);
+    my_putchar(nb % 10 + '0');
 }
